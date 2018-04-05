@@ -29,6 +29,9 @@ This software is still quite basic, but if you have an account at PEPS, you may 
  - `python ./peps_download.py  -c S2 --lon 1 --lat 43.5 -a peps.txt -d 2015-11-01 -f 2015-12-01 -o 51` 
 
  which downloads the Sentinel-2 products above --lon 1 --lat 43.5 (~Toulouse), acquired in November 2015 from orbit path number 51 only.
+ - `python ./peps_download.py  -c S2 --lon 1 --lat 43.5 -a peps.txt -d 2015-11-01 -f 2015-12-01 --amalthee` 
+
+ which downloads the Sentinel-2 products above --lon 1 --lat 43.5 (~Toulouse), acquired in November 2015 using the Amalthee API for CNES-HPC, which tranfers data directly from a buffer disk (GPFS)
 ### for Sentinel-1
 - `python ./peps_download.py  -c S1 --lonmin 1 --lonmax 2 --latmin 43 --latmax 44 -a peps.txt -d 2015-11-01 -f 2015-12-01`
 
@@ -36,6 +39,7 @@ This software is still quite basic, but if you have an account at PEPS, you may 
 
 - `python ./peps_download.py -c S1 -p GRD -l 'Toulouse' -a peps.txt -d 2015-11-01 -f 2015-12-01`
 which downloads S1 GRD products above Toulouse
+- `python ./peps_download.py -c S1 -p GRD -l 'Toulouse' -a peps.txt -d 2015-11-01 -f 2015-12-01 --amalthee` which downloads S1 GRD products above Toulouse using the Amalthee API for CNES-HPC, which tranfers data directly from a buffer disk (GPFS).
 
 ## Authentification 
 
